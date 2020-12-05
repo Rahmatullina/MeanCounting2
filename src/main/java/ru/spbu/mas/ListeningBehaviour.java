@@ -26,7 +26,7 @@ public class ListeningBehaviour extends CyclicBehaviour {
             } else {
                 //System.out.println(myAgent.getAID().getLocalName() + " received request from : " + msg3.getSender().getLocalName());
                 ACLMessage msg2 = new ACLMessage(ACLMessage.INFORM);
-                 if (random.nextInt(30) >= 10) {
+                 if (random.nextInt(30) >= 6) {
                      // current number with noise
                      msg2.setContent(String.valueOf(((DefaultAgent) myAgent).getNumber()));
                  }

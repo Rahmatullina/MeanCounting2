@@ -24,7 +24,7 @@ public class SynchronizationAgent extends Agent {
         System.out.println("Synchronization Agent #" + id + "Name : " + getLocalName());
         ParallelBehaviour concurrent = new ParallelBehaviour(this, ParallelBehaviour.WHEN_ALL);
 
-        concurrent.addSubBehaviour(new TickerBehaviour(this, 5000) {
+        concurrent.addSubBehaviour(new TickerBehaviour(this, 2000) {
             @Override
             protected void onTick() {
                 if (state == DefaultAgent.State.update)

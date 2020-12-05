@@ -15,7 +15,7 @@ public class CasualBehaviour extends Behaviour {
         if( ((DefaultAgent) myAgent).state == DefaultAgent.State.request && !didSent) {
                 ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
                 for (AID neighbour : ((DefaultAgent) myAgent).linkedAgents) {
-                    if (random.nextInt(30) >= 10) {
+                    if (random.nextInt(30) >= 6) {
                     //System.out.println(myAgent.getAID().getLocalName() + " added receiver: " + neighbour.getLocalName());
                     msg.addReceiver(neighbour);
                     ((DefaultAgent) myAgent).numSent++;

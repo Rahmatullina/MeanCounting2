@@ -43,8 +43,8 @@ class MainController {
                     return s1 - s2;                }
             });
             final int dmax = maxEntry.getValue().split(",").length;
-            float alpha = 1.f/dmax;
-            int numIterations = 15;
+            float alpha = 1.f/(2*dmax);
+            int numIterations = 50;
             AgentController agent;
             agent = cc.createNewAgent(Integer.toString(MainController.numberOfAgents + 1),
                     "ru.spbu.mas.SynchronizationAgent", new Object[]{numIterations});
